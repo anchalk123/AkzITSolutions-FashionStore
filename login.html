@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Access</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="logo">Fashion Store</a>
+       <nav>
+            <a href="shop.html">Home</a>
+            <a href="collection.html">Collections</a>
+            <a href="arrival.html" class="active">New Arrivals</a>
+            <a href="deal.html">Deals</a>
+            <a href="about.html">About</a>
+        </nav>
+        <div class="header-icons">
+            <a href="cart.html" style="color: inherit;"><i class="fa-solid fa-bag-shopping"></i></a>
+        </div>
+    </header>
+
+    <main class="auth-wrapper">
+        <div class="auth-card">
+            
+            <div class="auth-nav">
+                <button class="auth-tab active" id="tab-login" onclick="switchForm('login')">Sign In</button>
+                <button class="auth-tab" id="tab-register" onclick="switchForm('register')">Register</button>
+            </div>
+
+            <form id="login-form" class="auth-form active" onsubmit="handleAuthLog(event, 'login')">
+                <h2>Welcome Back</h2>
+                <subtitle>Sign in to access your saved cart & track orders.</subtitle>
+                
+                <div class="form-group">
+                    <label>Email Address</label>
+                    <input type="email" id="login-email" placeholder="name@example.com" required>
+                </div>
+                
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" id="login-pass" placeholder="••••••••" required>
+                    <i class="fa-regular fa-eye password-toggle-icon" onclick="togglePassView('login-pass')"></i>
+                </div>
+
+                <div class="form-options">
+                    <label class="checkbox-container">
+                        <input type="checkbox"> Remember me
+                    </label>
+                    <a href="#">Forgot Password?</a>
+                </div>
+
+                <button type="submit" class="btn-auth-submit">Sign In Account</button>
+            </form>
+
+            <form id="register-form" class="auth-form" onsubmit="handleAuthLog(event, 'register')">
+                <h2>Create Account</h2>
+                <subtitle>Join Fahion Storetoday for exclusive premium updates.</subtitle>
+                
+                <div class="form-group">
+                    <label>Full Name</label>
+                    <input type="text" id="reg-name" placeholder="John Doe" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Email Address</label>
+                    <input type="email" id="reg-email" placeholder="name@example.com" required>
+                </div>
+                
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" id="reg-pass" placeholder="Minimum 6 characters" minlength="6" required>
+                    <i class="fa-regular fa-eye password-toggle-icon" onclick="togglePassView('reg-pass')"></i>
+                </div>
+
+                <div class="form-options">
+                    <label class="checkbox-container" style="gap: 10px;">
+                        <input type="checkbox" required> I agree to the Terms & Privacy Policy
+                    </label>
+                </div>
+
+                <button type="submit" class="btn-auth-submit">Create My Account</button>
+            </form>
+
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <p>&copy; 2026 Fashion Store. All rights reserved.</p>
+    </footer>
+<script src="login.js"></script>
+
+</body>
+</html>

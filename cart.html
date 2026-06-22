@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Shopping Bag </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="cart.css">
+</head>
+<body>
+
+    <header>
+        <a href="shop.html" class="logo">FASHION STORE</a>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="collection.html">Collections</a>
+            <a href="arrival.html">New Arrivals</a>
+            <a href="deal.html" class="active">Deals</a>
+            <a href="about.html">About</a>
+        </nav>
+        <div class="header-icons">
+            <i class="fa-solid fa-magnifying-glass" style="cursor: pointer;"></i>
+            <i class="fa-solid fa-bag-shopping" style="color: var(--primary-dark);"></i>
+        </div>
+    </header>
+
+    <main class="cart-wrapper">
+        <h1 class="cart-title">Shopping Bag</h1>
+        
+        <div class="cart-container" id="main-cart-layout">
+            <div class="cart-items-panel">
+                <table class="cart-table">
+                    <thead>
+                        <tr>
+                            <th>Product</th>
+                            <th>Price</th>
+                            <th>Qty</th>
+                            <th>Subtotal</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody id="cart-table-body">
+                        </tbody>
+                </table>
+            </div>
+
+            <div class="summary-panel">
+                <h3>Order Summary</h3>
+                <div class="summary-row">
+                    <span>Bag Subtotal</span>
+                    <span id="bag-subtotal">₹0.00</span>
+                </div>
+                <div class="summary-row">
+                    <span>Shipping</span>
+                    <span style="color: #123026; font-weight: 500;">FREE</span>
+                </div>
+                <div class="summary-row total">
+                    <span>Estimated Total</span>
+                    <span id="bag-total">₹0.00</span>
+                </div>
+                <button class="btn-checkout" onclick="alert('Proceeding to Secure Checkout Logic...')">Proceed to Checkout</button>
+            </div>
+        </div>
+    </main>
+<script src="cart.js"></script>
+</body>
+</html>

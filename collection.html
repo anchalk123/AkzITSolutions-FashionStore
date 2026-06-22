@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dress Collection</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="collection.css">
+</head>
+
+<body>
+
+    <header>
+        <a href="#" class="logo">FASHION STORE</a>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="collection.html" class="active">Collections</a>
+            <a href="arrival.html">New Arrivals</a>
+            <a href="deal.html">Deals</a>
+            <a href="about.html">About</a>
+        </nav>
+        <div class="header-icons">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <a href="login.html" style="color:inherit;"><i class="fa-regular fa-user"></i></a>
+
+            <a href="cart.html" class="cart-icon-wrapper" style="color:inherit;">
+                <i class="fa-solid fa-bag-shopping"></i>
+                <span id="cart-count-badge" class="cart-badge">0</span>
+            </a>
+            </div>
+    </header>
+
+    <section class="collection-hero-container">
+        <div class="hero-landscape-img">
+            <img src="image/collection.webp" alt="Premium Dress Landscape">
+        </div>
+
+        <div class="hero-text-content">
+            <h1>The Dress Collection</h1>
+            <p>Explore curated silhouettes made from premium linens, organic cotton, and fine silks. Tailored perfectly
+                for effortless grace and everyday luxury.</p>
+            <a href="#dress-grid" class="hero-btn">Explore Collection</a>
+        </div>
+    </section>
+
+    <main class="collection-container">
+
+        <div class="products-toolbar">
+            <span id="result-counter">Showing all 4 results</span>
+
+            <select id="sort-select" onchange="sortProducts()">
+                <option value="default">Default Sorting</option>
+                <option value="low-high">Price: Low to High</option>
+                <option value="high-low">Price: High to Low</option>
+            </select>
+        </div>
+
+        <div class="dress-grid" id="dress-grid">
+
+            <div class="dress-card" data-price="800">
+                <div class="dress-img-holder">
+                    <span class="tag-badge">Best Seller</span>
+                    <img src="image/Earthy Muse Maxi Dress.webp" alt="Dress">
+                    <div class="card-actions">
+                        <button class="action-btn"><i class="fa-regular fa-heart"></i></button>
+                        <button class="action-btn"><i class="fa-regular fa-eye"></i></button>
+                    </div>
+                    <div class="add-to-cart-overlay">
+                        <button class="btn-cart-trigger"
+                            onclick="addToCart('Earthy Muse Maxi Dress', '₹800.00', 'Earthy Muse Maxi Dress.webp')">Quick
+                            Add to Cart</button>
+                    </div>
+                </div>
+                <div class="dress-info">
+                    <span>Linen Luxury</span>
+                    <h4>Earthy Muse Maxi Dress</h4>
+                    <div class="dress-price">₹800.00</div>
+                </div>
+            </div>
+
+            <div class="dress-card" data-price="550">
+                <div class="dress-img-holder">
+                    <img src="image/Sunkissed Midi Dress.webp" alt="Dress">
+                    <div class="card-actions">
+                        <button class="action-btn"><i class="fa-regular fa-heart"></i></button>
+                        <button class="action-btn"><i class="fa-regular fa-eye"></i></button>
+                    </div>
+                    <div class="add-to-cart-overlay">
+                        <button class="btn-cart-trigger"
+                            onclick="addToCart('Sunkissed Midi Dress', '₹550.00', 'Sunkissed Midi Dress.webp')">Quick
+                            Add to Cart</button>
+                    </div>
+                </div>
+                <div class="dress-info">
+                    <span>Cotton Blend</span>
+                    <h4>Sunkissed Midi Dress</h4>
+                    <div class="dress-price"><span class="old-price">₹75.00</span>₹550.00</div>
+                </div>
+            </div>
+
+            <div class="dress-card" data-price="600">
+                <div class="dress-img-holder">
+                    <span class="tag-badge" style="background-color: #e5b3a7; color: #123026;">New</span>
+                    <img src="image/Flora Silk Slip Dress.webp" alt="Dress">
+                    <div class="card-actions">
+                        <button class="action-btn"><i class="fa-regular fa-heart"></i></button>
+                        <button class="action-btn"><i class="fa-regular fa-eye"></i></button>
+                    </div>
+                    <div class="add-to-cart-overlay">
+                        <button class="btn-cart-trigger"
+                            onclick="addToCart('Flora Silk Slip Dress', '₹600.00', 'Flora Silk Slip Dress.webp')">Quick
+                            Add to Cart</button>
+                    </div>
+                </div>
+                <div class="dress-info">
+                    <span>Evening Wear</span>
+                    <h4>Flora Silk Slip Dress</h4>
+                    <div class="dress-price">₹600.00</div>
+                </div>
+            </div>
+
+            <div class="dress-card" data-price="700">
+                <div class="dress-img-holder">
+                    <img src="image/Boho Cottagecore Dress.webp" alt="Dress">
+                    <div class="card-actions">
+                        <button class="action-btn"><i class="fa-regular fa-heart"></i></button>
+                        <button class="action-btn"><i class="fa-regular fa-eye"></i></button>
+                    </div>
+                    <div class="add-to-cart-overlay">
+                        <button class="btn-cart-trigger"
+                            onclick="addToCart('Boho Cottagecore Dress', '₹700.00', 'Boho Cottagecore Dress.webp')">Quick
+                            Add to Cart</button>
+                    </div>
+                </div>
+                <div class="dress-info">
+                    <span>Summer Essential</span>
+                    <h4>Boho Cottagecore Dress</h4>
+                    <div class="dress-price">₹700.00</div>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <section class="trust-footer">
+        <div class="trust-item">
+            <i class="fa-regular fa-star"></i>
+            <div>
+                <h5>Quality You Can Trust</h5>
+                <p>Premium products selected for you.</p>
+            </div>
+        </div>
+        <div class="trust-item">
+            <i class="fa-solid fa-headset"></i>
+            <div>
+                <h5>Customer Support</h5>
+                <p>We are here to help 24/7.</p>
+            </div>
+        </div>
+        <div class="trust-item">
+            <i class="fa-regular fa-heart"></i>
+            <div>
+                <h5>Loved by Thousands</h5>
+                <p>Join our happy community.</p>
+            </div>
+        </div>
+        <div class="trust-item">
+            <i class="fa-solid fa-earth-americas"></i>
+            <div>
+                <h5>Sustainable Practices</h5>
+                <p>Thoughtfully made for a better world.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <div class="footer-grid">
+            <div class="footer-about">
+                <div class="footer-logo">LUMORA</div>
+                <p>Bringing you the finest collection of modern fashion, luxury accessories, and everyday lifestyle
+                    essentials.</p>
+                <div class="footer-socials">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-pinterest"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-column">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="collection.html">Shop Categories</a></li>
+                    <li><a href="arrival.html">New Arrivals</a></li>
+                    <li><a href="deal.html">Trending Items</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h4>Customer Support</h4>
+                <ul>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Shipping & Delivery</a></li>
+                    <li><a href="#">Returns & Exchanges</a></li>
+                    <li><a href="#">FAQs</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h4>Contact Info</h4>
+                <p style="margin-bottom: 8px;"><i class="fa-solid fa-location-dot"
+                        style="margin-right: 8px; color: var(--primary-dark);"></i> 123 Fashion Street, NY</p>
+                <p style="margin-bottom: 8px;"><i class="fa-solid fa-phone"
+                        style="margin-right: 8px; color: var(--primary-dark);"></i> +123 456 789</p>
+                <p><i class="fa-solid fa-envelope" style="margin-right: 8px; color: var(--primary-dark);"></i>
+                    support@store.com</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 Fashion Store. All rights reserved.</p>
+            <div class="footer-payments">
+                <i class="fa-brands fa-cc-visa"></i>
+                <i class="fa-brands fa-cc-mastercard"></i>
+                <i class="fa-brands fa-cc-apple-pay"></i>
+                <i class="fa-brands fa-cc-paypal"></i>
+            </div>
+        </div>
+    </footer>
+
+    <script src="collection.js"></script>
+
+</body>
+
+</html>

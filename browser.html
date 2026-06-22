@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browse All Products</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght=600;700&family=Poppins:wght=300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="browser.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">FASHION STORE</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="collection.html">Collections</a></li>
+                <li><a href="arrival.html">New Arrivals</a></li>
+                <li><a href="deal.html">Deals</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+        <div class="header-icons">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <a href="login.html"><i class="fa-regular fa-user"></i></a>
+            <a href="cart.html" class="cart-icon-wrapper">
+                <i class="fa-solid fa-bag-shopping"></i>
+                <span class="cart-badge" id="cart-count">0</span>
+            </a>
+        </div>
+    </header>
+
+    <main class="shop-wrapper">
+        <aside class="filter-sidebar">
+            <h3>Categories</h3>
+            <ul class="category-list">
+                <li class="category-item active" onclick="filterProducts('All', this)">
+                    <span>Browse All</span>
+                </li>
+                <li class="category-item" onclick="filterProducts('Women', this)">
+                    <span>Women</span>
+                </li>
+                <li class="category-item" onclick="filterProducts('Men', this)">
+                    <span>Men</span>
+                </li>
+                <li class="category-item" onclick="filterProducts('Home & Living', this)">
+                    <span>Home & Living</span>
+                </li>
+                <li class="category-item" onclick="filterProducts('Beauty', this)">
+                    <span>Beauty</span>
+                </li>
+                <li class="category-item" onclick="filterProducts('Accessories', this)">
+                    <span>Accessories</span>
+                </li>
+            </ul>
+        </aside>
+
+        <section class="products-main-panel">
+            <div class="panel-header">
+                <h2 id="current-category-title">All Products</h2>
+                <span id="product-count-badge" style="font-size: 13px; color: var(--text-muted);">Showing all items</span>
+            </div>
+
+            <div class="products-grid" id="master-products-grid">
+                </div>
+        </section>
+    </main>
+
+    <script src="browser.js"></script>
+</body>
+
+</html>

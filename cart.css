@@ -1,0 +1,234 @@
+:root {
+    --bg-body: #FAF7F2;
+    --bg-header: #F4EFE6;
+    --border-color: #E2DACB;
+    --primary-dark: #123026;
+    --text-dark: #2D2D2D;
+    --text-muted: #757575;
+    --pure-white: #ffffff;
+    --accent-red: #A3402C;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: var(--bg-body);
+    color: var(--text-dark);
+    overflow-x: hidden;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 8%;
+    background-color: var(--bg-header);
+    border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: var(--primary-dark);
+    text-decoration: none;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text-dark);
+    margin: 0 18px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.header-icons {
+    display: flex;
+    gap: 22px;
+    font-size: 18px;
+}
+
+.cart-wrapper {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 4%;
+}
+
+.cart-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    color: var(--primary-dark);
+    margin-bottom: 30px;
+}
+
+.cart-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+    align-items: start;
+}
+
+.cart-items-panel {
+    background: var(--pure-white);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 20px;
+}
+
+.cart-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.cart-table th {
+    text-align: left;
+    padding-bottom: 15px;
+    border-bottom: 1px solid var(--border-color);
+    font-size: 13px;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    letter-spacing: 0.5px;
+}
+
+.cart-row {
+    border-bottom: 1px solid #f4efe6;
+}
+
+.cart-row:last-child {
+    border-bottom: none;
+}
+
+.product-cell {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 20px 0;
+}
+
+.product-cell img {
+    width: 80px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+    background: #f5f0ec;
+}
+
+.cart-item-info h4 {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 4px;
+}
+
+.cart-item-info p {
+    font-size: 13px;
+    color: var(--text-muted);
+}
+
+.price-cell,
+.total-cell {
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.remove-btn {
+    background: none;
+    border: none;
+    color: #999;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.2s;
+}
+
+.remove-btn:hover {
+    color: var(--accent-red);
+}
+
+.summary-panel {
+    background: #fdfcf9;
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 25px;
+    position: sticky;
+    top: 110px;
+}
+
+.summary-panel h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    color: var(--primary-dark);
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.summary-row.total {
+    border-top: 1px solid var(--border-color);
+    padding-top: 15px;
+    font-weight: 600;
+    font-size: 17px;
+    color: var(--primary-dark);
+}
+
+.btn-checkout {
+    width: 100%;
+    background-color: var(--primary-dark);
+    color: white;
+    height: 50px;
+    border: none;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    margin-top: 15px;
+    box-shadow: 0 4px 12px rgba(18, 48, 38, 0.15);
+    transition: 0.3s;
+}
+
+.btn-checkout:hover {
+    opacity: 0.9;
+}
+
+.empty-cart-message {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.empty-cart-message i {
+    font-size: 50px;
+    color: var(--border-color);
+    margin-bottom: 15px;
+}
+
+.btn-shop-back {
+    display: inline-block;
+    margin-top: 15px;
+    background: var(--primary-dark);
+    color: white;
+    padding: 10px 25px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+@media (max-width: 768px) {
+    .cart-container {
+        grid-template-columns: 1fr;
+    }
+}
