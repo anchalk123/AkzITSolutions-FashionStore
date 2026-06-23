@@ -5,7 +5,7 @@ A modern, fully responsive fashion e-commerce website frontend built as an inter
 ---
 
 ## 🔗 Project Links
-* **Live Demo:** https://akzitsolutions-fashionstore.onrender.com
+* **Live Demo:** https://fashion-store-izfq.onrender.com
 * **Github Repo:** https://github.com/anchalk123/AkzITSolutions-FashionStore/tree/main
 
 ---
